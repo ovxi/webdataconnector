@@ -9,7 +9,7 @@ the beginning of each phase. If you don't need custom initialization
 logic, you don't need to do anything; code in the Tableau JavaScript
 library includes default initialization logic for you.
 
-To implement custom initialization, you create an
+To implement custom initialization, create an
 [init]({{ site.baseurl }}/docs/api_ref#webdataconnectorapi.webdataconnector.init) function for your connector. In the
 function, run your initialization code. When initialization is complete,
 call the passed in [initCallback]({{ site.baseurl }}/docs/api_ref#webdataconnectorapi.initcallback)
@@ -22,7 +22,7 @@ to tell Tableau that initialization is finished, as in this example:
     };
 ```
 
-One typical scenario for using custom initialization code is to tell tableau about
+One typical scenario for using custom initialization code is to tell Tableau about
 the auth needs of your connector.  Please see
 [WDC Authentication]({{ site.baseurl }}/docs/wdc_authentication.html)
 for details on this.
@@ -54,7 +54,7 @@ connector is in: <span
 class="api-command-ref">tableau.phaseEnum.interactivePhase</span>, <span
 class="api-command-ref">tableau.phaseEnum.gatherDataPhase</span>, or
 <span class="api-command-ref">tableau.phaseEnum.authPhase</span>. The
-following example shows how to use this property.
+following example shows how to use this property:
 
 ```js
 myConnector.init = function(initCallback) {
